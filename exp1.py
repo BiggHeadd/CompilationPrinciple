@@ -10,7 +10,7 @@ class Compile(object):
                       ':': 17, ':=': 18, '<': 20,
                       '<>': 21, '<=': 22, '>': 23,
                       '>=': 24, '=': 25, ';': 26,
-                      '(': 27, ')': 28, '#': 0}
+                      '(': 27, ')': 28}
 
         self.calcs = ['+', '-', '*', '/', ':', ':=', '<', '<>', '>', '>=', '=', '<=']
         self.delimiters = [';', '(', ')']
@@ -108,6 +108,9 @@ class Compile(object):
 
 
 if __name__ == "__main__":
+    ### 测试文件路径
+    test_filename = "./data_test/test_2.txt"
+
     compile = Compile()
-    compile.complie(filename="./data/test.txt")
+    compile.complie(filename=test_filename)
     compile.print_result()

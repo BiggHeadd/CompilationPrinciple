@@ -29,9 +29,11 @@
 
 ## 测试结果
 - 测试数据一:
+
 ![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/test_data_1.png)
-![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/test_data_1.png)
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/test_result_1.png)
 
 - 测试数据二:
+
 ![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/test_data_2.png)
-![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/test_data_2.png)
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/test_result_2.png)
