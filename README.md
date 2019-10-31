@@ -15,7 +15,7 @@
     ```
     if __name__ == "__main__":
     ### 测试文件路径
-    test_filename = "./data/test.txt"
+        test_filename = "./data/test.txt"
     ```
 
 - 符号对应的种别码:
