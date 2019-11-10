@@ -23,7 +23,9 @@ class Compile(object):
     def complie(self, filename):
         data = self.read_data(filename=filename)
 
+        line_index = 0
         for line in data:
+            line_index += 1
             word = ""
             digit = ""
             calc = ""
@@ -45,18 +47,22 @@ class Compile(object):
                             break
 
                         if word in self.keyWordMap.keys():
-                            self.result.append((self.keyWordMap[word], word))
+                            self.result.append((self.keyWordMap[word], word, line_index))
                             word = ""
                             key = True
                             break
-                        if line_strip[line_p_clone+1].isdigit() or line_strip[line_p_clone+1].isalpha():
+                        elif line_strip[line_p_clone+1].isdigit() or line_strip[line_p_clone+1].isalpha():
                             word += line_strip[line_p_clone+1]
-                            line_p_clone+=1
+                            line_p_clone += 1
                         else:
                             break
+                    if word in self.keyWordMap.keys():
+                        self.result.append((self.keyWordMap[word], word, line_index))
+                        word = ""
+                        key = True
                     line_p = line_p_clone
                     if not key:
-                        self.result.append((self.keyWordMap['letter'], word))
+                        self.result.append((self.keyWordMap['letter'], word, line_index))
                         word = ""
                 elif line_strip[line_p].isdigit():
                     # 开头是数字
@@ -66,37 +72,37 @@ class Compile(object):
                         else:
                             break
                         line_p+=1
-                    self.result.append((self.keyWordMap['digit'], digit))
+                    self.result.append((self.keyWordMap['digit'], digit, line_index))
                     digit = ""
                     line_p-=1
                 elif line_strip[line_p] in self.calcs:
                     # 开头是运算符
                     if line_strip[line_p] == ':':
                         if line_p+1 < len_line and line_strip[line_p+1]=='=':
-                            self.result.append((self.keyWordMap[':='], ':='))
+                            self.result.append((self.keyWordMap[':='], ':=', line_index))
                             line_p+=1
                         else:
-                            self.result.append((self.keyWordMap[':'], ':'))
+                            self.result.append((self.keyWordMap[':'], ':', line_index))
                     elif line_strip[line_p] == '<':
                         if line_p+1 < len_line and line_strip[line_p+1]=='=':
-                            self.result.append((self.keyWordMap['<='], '<='))
+                            self.result.append((self.keyWordMap['<='], '<=', line_index))
                             line_p += 1
                         elif line_strip[line_p+1]=='>':
-                            self.result.append((self.keyWordMap['<>'], '<>'))
+                            self.result.append((self.keyWordMap['<>'], '<>', line_index))
                             line_p += 1
                         else:
-                            self.result.append((self.keyWordMap['<'], '<'))
+                            self.result.append((self.keyWordMap['<'], '<', line_index))
                     elif line_strip[line_p] == '>':
                         if line_p+1 < len_line and line_strip[line_p+1]=='=':
-                            self.result.append((self.keyWordMap['>='], '>='))
+                            self.result.append((self.keyWordMap['>='], '>=', line_index))
                             line_p += 1
                         else:
-                            self.result.append((self.keyWordMap['>'], '>'))
+                            self.result.append((self.keyWordMap['>'], '>', line_index))
                     else:
-                        self.result.append((self.keyWordMap[line_strip[line_p]], line_strip[line_p]))
+                        self.result.append((self.keyWordMap[line_strip[line_p]], line_strip[line_p], line_index))
                 elif line_strip[line_p] in self.delimiters:
                     # 开头是分隔符
-                    self.result.append((self.keyWordMap[line_strip[line_p]], line_strip[line_p]))
+                    self.result.append((self.keyWordMap[line_strip[line_p]], line_strip[line_p], line_index))
                 elif line_strip[line_p] == '#':
                     break
                 line_p += 1
