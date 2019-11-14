@@ -13,7 +13,7 @@ class RecursiveDescentAnalysis(Compile):
         self.statement()
         while self.word[0] == 26:   # ;
             self.scanner()
-            if self.word[1] == 'end':
+            if self.word[1] == 'end' or self.index >= len(self.result)-1:
                 return
             self.statement()
 
@@ -51,10 +51,11 @@ class RecursiveDescentAnalysis(Compile):
     def factor(self):
         if self.word[0] == 10 or self.word[0] == 11:    # letter or digit
             self.scanner()
+            # print(self.word)
         elif self.word[0] == 27:    # (
             self.scanner()
             self.expression()
-            if self.word[0] == 28:
+            if self.word[0] == 28:  # )
                 self.scanner()
             else:
                 self.mistake = True
@@ -65,12 +66,17 @@ class RecursiveDescentAnalysis(Compile):
 
 
     def scanner(self):
-        self.word = self.result[self.index]
-        self.index += 1
+        if self.index >= len(self.result):
+            self.word = self.result[-1]
+            self.index = len(self.result)-1
+        else:
+            self.word = self.result[self.index]
+            self.index += 1
         # print(self.word)
 
     def Recursive(self, file):
         self.complie(file)
+        # print(self.result)
         self.scanner()
         if self.word[0] == 1:   # begin
             self.scanner()
@@ -78,16 +84,30 @@ class RecursiveDescentAnalysis(Compile):
             if self.word[1] == 'end':
                 if self.index == len(self.result) and not self.mistake:
                     print("success")
+            elif self.word[0] == 28:
+                print("在第 ", self.word[2], " 行语句错误")
+            elif self.result[-1][1] == 'end':
+                print("在第 ", self.word[2], " 行语句错误")
             else:
-                if not self.mistake:
-                    print("在第 ", self.word[2], " 行缺少 end")
+                print("在第 ", self.word[2], " 行缺少 end")
 
         else:
             print("在第 ", self.word[2], " 行 begin 错误")
+            self.index-=1
+            self.scanner()
+            self.yuju()
+            # print(self.word)
+            if self.word[1] == 'end':
+                if self.index == len(self.result) and not self.mistake:
+                    pass
+            elif self.word[0] == 28:
+                print("在第 ", self.word[2], " 行语句错误")
+            else:
+                print("在第 ", self.word[2], " 行缺少 end")
             exit()
 
 if __name__ == "__main__":
     ### 测试文件路径
-    test_filename = "./data_test/test_4.txt"
+    test_filename = "./data_test/test_5.txt"
     recursiveDescentAnalysis = RecursiveDescentAnalysis()
     recursiveDescentAnalysis.Recursive(file=test_filename)

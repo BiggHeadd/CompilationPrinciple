@@ -1,1 +1,1 @@
-begin x:=+b*c end
+x:=a+b*c end
