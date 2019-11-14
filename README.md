@@ -34,13 +34,13 @@
 ## 测试结果
 - 测试数据一:
 
-![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/test_data_1.png)
-![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/test_result_1.png)
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp1/test_data_1.png)
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp1/test_result_1.png)
 
 - 测试数据二:
 
-![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/test_data_2.png)
-![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/test_result_2.png)
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp1/test_data_2.png)
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp1/test_result_2.png)
 
 
 # 实验二: 递归下降语法分析实验
@@ -58,5 +58,18 @@
         test_filename = "./data/test.txt"
     ```
  
- - 测试数据:
- 
+- 测试数据一:
+
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp2/3.png)
+
+- 测试数据一:
+
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp2/4.png)
+
+- 测试数据一:
+
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp2/5.png)
+
+- 测试数据一:
+
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp2/6.png)
