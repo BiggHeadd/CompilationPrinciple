@@ -54,7 +54,7 @@ class RecursiveDescentAnalysis(Compile):
             self.scanner()
             ep2 = self.term()
             tp = self.new_temp()
-            self.middle_code.append((tp, eplace, sign, ep2))
+            self.middle_code.append((tp, ":=", eplace, sign, ep2))
             eplace = tp
         return eplace
 
@@ -65,7 +65,7 @@ class RecursiveDescentAnalysis(Compile):
             self.scanner()
             ep2 = self.factor()
             tp = self.new_temp()
-            self.middle_code.append((tp, eplace, sign, ep2))
+            self.middle_code.append((tp, ":=", eplace, sign, ep2))
             eplace = tp
         return eplace
 
@@ -130,11 +130,11 @@ class RecursiveDescentAnalysis(Compile):
 
     def print_middle_code(self):
         for each in self.middle_code:
-            print(each)
+            print(" ".join(each))
 
 if __name__ == "__main__":
     ### 测试文件路径
-    test_filename = "./data_test/test_3.txt"
+    test_filename = "./data_test/test_9.txt"
     recursiveDescentAnalysis = RecursiveDescentAnalysis()
     recursiveDescentAnalysis.Recursive(file=test_filename)
     recursiveDescentAnalysis.print_middle_code()

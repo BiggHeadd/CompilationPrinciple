@@ -73,3 +73,26 @@
 - 测试数据四:
 
 ![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp2/6.png)
+
+# 实验三: 递归下降语法制导翻译实验
+- 运行方法:
+    - 命令行运行: python exp3.py
+    - pycharm idea 运行: 选中exp3.py, 选择运行
+    
+- 测试数据设置
+    - 测试数据设置:
+    - 默认测试数据在data_test文件夹下面
+    - exp1.py 里面的 main 中 设置test_filename
+    ```
+    if __name__ == "__main__":
+    ### 测试文件路径
+        test_filename = "./data/test.txt"
+    ```
+
+- 测试数据一:
+
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp3/1.png)
+
+- 测试数据二:
+
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp2/2.png)

@@ -108,6 +108,6 @@ class RecursiveDescentAnalysis(Compile):
 
 if __name__ == "__main__":
     ### 测试文件路径
-    test_filename = "./data_test/test_5.txt"
+    test_filename = "./data_test/test_7.txt"
     recursiveDescentAnalysis = RecursiveDescentAnalysis()
     recursiveDescentAnalysis.Recursive(file=test_filename)
