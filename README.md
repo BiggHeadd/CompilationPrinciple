@@ -62,14 +62,14 @@
 
 ![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp2/3.png)
 
-- 测试数据一:
+- 测试数据二:
 
 ![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp2/4.png)
 
-- 测试数据一:
+- 测试数据三:
 
 ![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp2/5.png)
 
-- 测试数据一:
+- 测试数据四:
 
 ![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp2/6.png)
