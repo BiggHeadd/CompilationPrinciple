@@ -95,4 +95,4 @@
 
 - 测试数据二:
 
-![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp2/2.png)
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/exp3/2.png)
