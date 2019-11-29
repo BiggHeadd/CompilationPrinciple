@@ -256,7 +256,7 @@ class FinalComplier(LexicalAnalysis):
 
 if __name__ == "__main__":
     ### 测试文件路径
-    test_filename = "c_LexicalError.txt"
+    test_filename = "c_right_4.txt"
 
     file_folder = Path("./data_test")
     grammerAnalysis = FinalComplier()

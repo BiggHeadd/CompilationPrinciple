@@ -37,3 +37,7 @@
 - 测试数据五:
 
 ![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/final/5.png)
+
+- 测试数据六:
+
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/final/6.png)
