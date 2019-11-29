@@ -20,20 +20,20 @@
  
  - 测试数据一:
 
-![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/FinalComplier/data_test/1.txt)
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/final/1.png)
 
 - 测试数据二:
 
-![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/FinalComplier/data_test/2.txt)
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/final/2.png)
 
 - 测试数据三:
 
-![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/FinalComplier/data_test/3.txt)
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/final/3.png)
 
 - 测试数据四:
 
-![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/FinalComplier/data_test/4.txt)
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/final/4.png)
 
 - 测试数据五:
 
-![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/FinalComplier/data_test/5.txt)
+![Image text](https://github.com/BiggHeadd/CompilationPrinciple/blob/master/pic/final/5.png)
