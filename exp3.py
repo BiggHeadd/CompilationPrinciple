@@ -137,4 +137,5 @@ if __name__ == "__main__":
     test_filename = "./data_test/test_9.txt"
     recursiveDescentAnalysis = RecursiveDescentAnalysis()
     recursiveDescentAnalysis.Recursive(file=test_filename)
-    recursiveDescentAnalysis.print_middle_code()
+    if not recursiveDescentAnalysis.mistake:
+        recursiveDescentAnalysis.print_middle_code()
