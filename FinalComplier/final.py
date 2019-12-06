@@ -12,6 +12,7 @@ class FinalComplier(LexicalAnalysis):
         self.middle_code_index = 0
         self.gotos = []
         self.in_while = 0
+        self.into_while = False
 
     def get_new_tmp(self):
         tmp = "T" + str(self.tmp_index)
@@ -131,6 +132,7 @@ class FinalComplier(LexicalAnalysis):
                         right = self.word[1]
                         self.scan()
                         if self.word[1] == ')':
+                            self.into_while = True
                             self.middle_code.append((self.middle_code_index, "if", left, sign, right, 'goto',
                                                      str(self.middle_code_index + 2)))
                             self.middle_code_index += 1
@@ -190,7 +192,12 @@ class FinalComplier(LexicalAnalysis):
                             before = len(self.middle_code)
                             self.block()
                             after = len(self.middle_code)
-                            self.middle_code[goto_line] = (str(goto_line), 'goto', str(goto_line + after - before + 1 + self.in_while))
+                            if self.into_while:
+                                self.middle_code[goto_line] = (
+                                str(goto_line), 'goto', str(goto_line + after - before + self.in_while))
+                            else:
+                                self.middle_code[goto_line] = (
+                                str(goto_line), 'goto', str(goto_line + after + 1 - before + self.in_while))
                             # self.scan()
                             # print("block_out: ", self.word)
                             # if not self.word[1] == '}':
@@ -256,7 +263,7 @@ class FinalComplier(LexicalAnalysis):
 
 if __name__ == "__main__":
     ### 测试文件路径
-    test_filename = "c_right_4.txt"
+    test_filename = "c_right_2.txt"
 
     file_folder = Path("./data_test")
     grammerAnalysis = FinalComplier()
